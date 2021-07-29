@@ -1,5 +1,9 @@
+let div = document.getElementById("content");
 function highlightWords(paragraph, colours) {
   // Write your code here...
+  const select= document.createElement("select");
+  const p = document.createElement("p");
+
 }
 
 const paragraph =
@@ -8,3 +12,12 @@ const paragraph =
 const colours = ["yellow", "green", "blue", "none"];
 
 highlightWords(paragraph, colours);
+
+let exampleParagraph = "I am a paragraph";
+let paragraphArray = exampleParagraph.split(" ");
+paragraphArray.forEach(word => {
+  return "<span>" + word + "</span>";
+})
+let p = document.createElement("p");
+p.innerHTML = paragraphArray.join(" ")
+div.appendChild(p);
